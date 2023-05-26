@@ -31,6 +31,12 @@ body{
     height: 100vh;
     overflow: hidden;
 }
+.lineborder{
+    background: rgba(32, 32, 32, 0.95);
+    padding: var(--padmedium);
+    height: 100%;
+    width: 100%;
+}
 .escape{
     position: absolute;
     bottom: calc(2 * var(--gaplarge));
@@ -78,13 +84,15 @@ body{
     color: rgba(255, 255, 255, 0.65);
 }
 .container{
-    background: rgba(32, 32, 32, 0.85);
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    /* background: rgba(32, 32, 32, 0.95); */
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #f3eee281;
+    border-radius: var(--radius);
 }
 .taxi-container{
     width: 90%;
@@ -99,7 +107,7 @@ header .flexsmall{
     justify-content: flex-end;
 }
 header .staff-icon{
-    width: calc(2 * var(--fontlarge));
+    width: 40px;
     aspect-ratio: 1/1;
 }
 header .header-text{
@@ -114,7 +122,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: var(--gaplarge);
-    height: 62.5vh;
+    height: 65vh;
     margin-top: var(--gaplarge);
 }
 .first-small{
@@ -239,7 +247,7 @@ justify-content: space-around;
     border: none;
 }
 .get-employed:hover{
-    background: #FFC93E;;
+    background: #FFC93E;
     color: rgba(255, 255, 255, 0.373);
 }
 
@@ -248,10 +256,26 @@ justify-content: space-around;
         width: 75%;
     }
     .requirement{
-        font-size: calc(1.3 * var(--fontsmall));
+        font-size: calc(1.1 * var(--fontsmall));
         gap: var(--gap);
     }
     .taxi-parallel-logo{
         width: auto;
+    }
+}
+@media screen and (min-width: 1440px) {
+    body{
+        --fontsmall: clamp(16px, 0.7vw, 30px);
+        --fontmedium: clamp(18px, 0.8vw, 40px);
+        --fontlarge: clamp(20px, 0.9vw , 50px);
+        --fontxl: clamp(22px, 1vw, 60px);
+    }
+}
+@media screen and (min-width: 1900px) {
+    body{
+        --fontsmall: clamp(24px, 0.7vw, 30px);
+        --fontmedium: clamp(28px, 0.8vw, 40px);
+        --fontlarge: clamp(32px, 0.9vw , 50px);
+        --fontxl: clamp(36px, 0.8vw, 60px);
     }
 }
