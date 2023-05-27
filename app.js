@@ -47,3 +47,23 @@ const pushJobData = (job) => {
     } )
 }
 pushJobData(jobData);
+
+// ESCAPE KEY BACK
+document.addEventListener('keydown', evt => {
+    if (evt.key === 'Escape') {
+    }
+});
+
+// ENTER KEY CLICKED
+document.addEventListener('keydown', evt => {
+    if(evt.key === 'Enter'){
+        alert("ENTER GET EMPLOYED")
+    }
+})
+
+// SPACE KEY CLICKED
+document.addEventListener('keydown', evt => {
+    if(evt.key === ' '){
+        alert("SPACEBAR TRANSPORT RENTAL");
+    }
+})
