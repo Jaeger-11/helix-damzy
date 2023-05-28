@@ -56,6 +56,12 @@ body{
     border-radius: var(--radius);
     border: 0;  
 }
+.capitalize::first-letter{
+    text-transform: capitalize;
+}
+.opacity-80{
+    opacity: 0.8;
+}
 .pointer{
     cursor: pointer;
 }
@@ -87,6 +93,14 @@ body{
 }
 .grey{
     color: rgba(255, 255, 255, 0.35);
+}
+.hidden{
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+    pointer-events: none;
+    transform: translateY(10vh);
+    color: transparent;
 }
 .container{
     width: 100%;
@@ -283,7 +297,8 @@ main{
 }
 .ordertab{
     width: 100%;
-    padding: var(--padlarge);
+    padding: var(--padlarger);
+    gap: var(--gaplarge);
 }
 .privateorder{ 
     border: 1px solid rgba(255, 201, 62, 0.4);
@@ -291,17 +306,30 @@ main{
     border-radius: var(--radius);
     background: #FFC93E59;
 }
+.privateorder:hover{
+    background: #FFC93E99;
+    border: 1px solid #FFC93E;
+}
 .governmentorder{
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     background: #FFFFFF40;
     border-radius: var(--radius);
 }
+.governmentorder:hover{
+    border: 1px solid #FFFFFF;
+    background: #ffffff58;
+}
 .taxi-first-header{
     display: flex;
     justify-content: space-between;
     margin-top: var(--fontlarge);
     margin-bottom: var(--fontlarge);
+}
+.taxi-first-header .total{
+    color: rgba(255, 255, 255, 0.35);
+    font-size: calc(0.8 * var(--fontsmall));
+    font-weight: 600;
 }
 .taxi-first .second-large{
     display: block;
@@ -311,8 +339,9 @@ main{
 }
 .grid-4{
     display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr;
     padding: var(--padlarge);
+    gap: 0.2rem;
 }
 .gold-cont{
     background: rgba(255, 201, 62, 0.12);
@@ -324,6 +353,18 @@ main{
     font-weight: 600;
     color: #FFC93E;
     font-size: var(--fontsmall);
+}
+.acceptorder{
+    background: rgba(255, 201, 62, 0.9);
+    border-radius: var(--radius);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3F2610;
+    font-weight: bold;
+    padding: var(--padlittle);
+    cursor: pointer;
+    border: none;
+    height: max-content;
 }
 @media screen and (min-width: 1200px) {
     .taxi-container{

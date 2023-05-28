@@ -1,3 +1,5 @@
+const taxiemployee = document.querySelector('.taxi-employee');
+const taxipark = document.querySelector('.taxi-park');
 
 // PUSH NUMBER OF TOTAL STAFF
 const pushTotalStaff = (total) => {
@@ -71,6 +73,62 @@ document.addEventListener('keydown', evt => {
 // TAB SWITCHING
 document.addEventListener('keydown', evt => {
     if(evt.key === 'Tab'){
-        alert("SWITCH ");
+        taxiemployee.classList.toggle('hidden');
+        taxipark.classList.toggle('hidden')
     }
 })
+
+// SECOND SCREEN (TAXI-PARK) FUNCTIONS
+let taxiorderdata = [
+    {
+        customer: "harley",
+        distance: 1665,
+        note: "i'm with my pet",
+        status: "pending"
+    },
+    {
+        customer: "dakota",
+        distance: 567,
+        note: "",
+        status: "pending"
+    },
+    {
+        customer: "logan",
+        distance: 156,
+        note: "i’m glad you are my taxi driver. Please be careful on the road and respect my wishes.",
+        status: "accepted"
+    },
+    {
+        customer: "taylor",
+        distance: 687,
+        note: "",
+        status: "waiting"
+    },
+]
+
+const taxiorders = document.querySelector('.taxiorders');
+const pushTaxiOrders = (orders) => {
+    taxiorders.innerHTML = ""
+    orders.map((order) => {
+        console.log(order)
+        const { customer, distance, note, status } = order;
+        taxiorders.innerHTML += `
+        <section class="customertaxiorder">
+            <div class="grid-4">
+                <p class="capitalize semibold fontsmall">${customer}</p>
+                <p class="capitalize semibold fontsmall">${distance}</p>
+                <p class="capitalize opacity-80 fontsmall">${note}</p>
+                <button class="acceptorder fontsmall">Accept the order</button>
+            </div>
+            <div class="dotsandline">
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+            </div>
+        </section>
+        `
+    })
+}
+pushTaxiOrders(taxiorderdata);
+
+document.querySelector('.totalorders').innerHTML = taxiorderdata.length
