@@ -150,13 +150,7 @@ const pushTaxiOrders = (orders) => {
 pushTaxiOrders(taxiorderdata);
 
 const acceptOrder = (id) => {
-    taxiorderdata = taxiorderdata.map((order) => {
-        if(order.id === id){
-            return { ...order, status: "accepted" }
-        } else {
-            return {...order}
-        }
-    })
+    taxiorderdata = taxiorderdata.filter((order) => order.id !== id)
     pushTaxiOrders(taxiorderdata)
 }
 
