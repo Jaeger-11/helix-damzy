@@ -3,7 +3,8 @@ const taxipark = document.querySelector('.taxi-park');
 
 // PUSH NUMBER OF TOTAL STAFF
 const pushTotalStaff = (total) => {
-    document.querySelector('.totalstaff').innerHTML = total
+    document.querySelectorAll('.totalstaff')[0].innerHTML = total
+    document.querySelectorAll('.totalstaff')[1].innerHTML = total
 }
 pushTotalStaff(25)
 

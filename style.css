@@ -321,6 +321,9 @@ main{
     background: #FFC93E99;
     border: 1px solid #FFC93E;
 }
+.privateorder:hover svg g{
+    opacity: 1;
+}
 .governmentorder{
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
@@ -330,6 +333,9 @@ main{
 .governmentorder:hover{
     border: 1px solid #FFFFFF;
     background: #ffffff58;
+}
+.governmentorder:hover svg g{
+    opacity: 1;
 }
 .taxi-first-header{
     display: flex;
