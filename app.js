@@ -85,28 +85,39 @@ document.addEventListener('keydown', evt => {
 // SECOND SCREEN (TAXI-PARK) FUNCTIONS
 let taxiorderdata = [
     {
+        id: 1,
         customer: "harley",
         distance: 1665,
         note: "i'm with my pet",
         status: "pending"
     },
     {
+        id: 2,
         customer: "dakota",
         distance: 567,
         note: "",
         status: "pending"
     },
     {
+        id: 3,
         customer: "logan",
         distance: 156,
         note: "i’m glad you are my taxi driver. Please be careful on the road and respect my wishes.",
         status: "accepted"
     },
     {
+        id: 4,
         customer: "taylor",
         distance: 687,
         note: "",
         status: "waiting"
+    },
+    {
+        id: 5,
+        customer: "dami",
+        distance: 99,
+        note: "Pls be fast...",
+        status: "pending"
     },
 ]
 
@@ -115,14 +126,14 @@ const pushTaxiOrders = (orders) => {
     taxiorders.innerHTML = ""
     orders.map((order) => {
         console.log(order)
-        const { customer, distance, note, status } = order;
+        const { customer, distance, note, status, id } = order;
         taxiorders.innerHTML += `
         <section class="customertaxiorder">
             <div class="grid-4">
                 <p class="capitalize semibold fontsmall">${customer}</p>
                 <p class="capitalize semibold fontsmall">${distance}</p>
                 <p class="capitalize opacity-80 fontsmall ${!note && 'dull' }">${note ? note : "no comment..."}</p>
-                ${ status === "pending" ? `<button class="acceptorder fontsmall">Accept the order</button>` : ''}
+                ${ status === "pending" ? `<button class="acceptorder fontsmall" onclick="acceptOrder(${id})">Accept the order</button>` : ''}
                 ${status === "accepted" ? `<div class="flexsmall fontsmall bold process"> <img src='images/location.svg' /> ON THE WAY </div>` : ''}
                 ${ status === "waiting" ? `<div class="flexsmall fontsmall bold process"><img src='images/waiting.svg' /> WAITING </div>` : ''}
             </div>
@@ -136,5 +147,16 @@ const pushTaxiOrders = (orders) => {
     })
 }
 pushTaxiOrders(taxiorderdata);
+
+const acceptOrder = (id) => {
+    taxiorderdata = taxiorderdata.map((order) => {
+        if(order.id === id){
+            return { ...order, status: "accepted" }
+        } else {
+            return {...order}
+        }
+    })
+    pushTaxiOrders(taxiorderdata)
+}
 
 document.querySelector('.totalorders').innerHTML = taxiorderdata.length
