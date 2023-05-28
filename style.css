@@ -375,6 +375,7 @@ main{
     overflow-y: scroll;
     height: 42vh;
     padding-right: var(--gap);
+    margin-top: 1rem;
 }
 .acceptorder{
     background: rgba(255, 201, 62, 0.9);
