@@ -58,15 +58,19 @@ document.addEventListener('keydown', evt => {
 
 // ENTER KEY CLICKED
 document.addEventListener('keydown', evt => {
-    if(evt.key === 'Enter'){
-        alert("ENTER GET EMPLOYED");
+    if( taxiemployee.classList.contains('hidden') == false ){
+        if(evt.key === 'Enter'){
+            alert("ENTER GET EMPLOYED");
+        }
     }
 })
 
 // SPACE KEY CLICKED
 document.addEventListener('keydown', evt => {
-    if(evt.key === ' '){
-        alert("SPACEBAR TRANSPORT RENTAL");
+    if( taxiemployee.classList.contains('hidden') == false ){
+        if(evt.key === ' '){
+            alert("SPACEBAR TRANSPORT RENTAL");
+        }
     }
 })
 
@@ -117,8 +121,10 @@ const pushTaxiOrders = (orders) => {
             <div class="grid-4">
                 <p class="capitalize semibold fontsmall">${customer}</p>
                 <p class="capitalize semibold fontsmall">${distance}</p>
-                <p class="capitalize opacity-80 fontsmall">${note}</p>
-                <button class="acceptorder fontsmall">Accept the order</button>
+                <p class="capitalize opacity-80 fontsmall ${!note && 'dull' }">${note ? note : "no comment..."}</p>
+                ${ status === "pending" ? `<button class="acceptorder fontsmall">Accept the order</button>` : ''}
+                ${status === "accepted" ? `<div class="flexsmall fontsmall bold process"> <img src='images/location.svg' /> ON THE WAY </div>` : ''}
+                ${ status === "waiting" ? `<div class="flexsmall fontsmall bold process"><img src='images/waiting.svg' /> WAITING </div>` : ''}
             </div>
             <div class="dotsandline">
                 <div class="dot"></div>

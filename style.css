@@ -366,6 +366,13 @@ main{
     border: none;
     height: max-content;
 }
+.process{
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.1em;
+}
+.dull{
+    color: rgba(255, 255, 255, 0.3);
+}
 @media screen and (min-width: 1200px) {
     .taxi-container{
         width: 75%;
