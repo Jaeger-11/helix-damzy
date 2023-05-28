@@ -265,7 +265,66 @@ main{
     background: #FFC93E;
     color: rgba(255, 255, 255, 0.373);
 }
-
+.taxi-first{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+.taxi-second{
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 201, 62, 0.1);
+    border: 1px solid rgba(255, 201, 62, 0.2);
+    border-radius: var(--radius);
+    padding: calc( 1.5 * var(--padlarger));
+}
+.taxi-first-logo{
+    margin-top: 0 !important;
+}
+.ordertab{
+    width: 100%;
+    padding: var(--padlarge);
+}
+.privateorder{ 
+    border: 1px solid rgba(255, 201, 62, 0.4);
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
+    border-radius: var(--radius);
+    background: #FFC93E59;
+}
+.governmentorder{
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
+    background: #FFFFFF40;
+    border-radius: var(--radius);
+}
+.taxi-first-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--fontlarge);
+    margin-bottom: var(--fontlarge);
+}
+.taxi-first .second-large{
+    display: block;
+}
+.open{
+    color: rgba(255, 255, 255, 0.5);
+}
+.grid-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1fr;
+    padding: var(--padlarge);
+}
+.gold-cont{
+    background: rgba(255, 201, 62, 0.12);
+    border: 1px solid rgba(255, 201, 62, 0.2);
+    border-radius: var(--radius);
+}
+.gold{
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    color: #FFC93E;
+    font-size: var(--fontsmall);
+}
 @media screen and (min-width: 1200px) {
     .taxi-container{
         width: 75%;

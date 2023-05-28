@@ -57,7 +57,7 @@ document.addEventListener('keydown', evt => {
 // ENTER KEY CLICKED
 document.addEventListener('keydown', evt => {
     if(evt.key === 'Enter'){
-        alert("ENTER GET EMPLOYED")
+        alert("ENTER GET EMPLOYED");
     }
 })
 
@@ -65,5 +65,12 @@ document.addEventListener('keydown', evt => {
 document.addEventListener('keydown', evt => {
     if(evt.key === ' '){
         alert("SPACEBAR TRANSPORT RENTAL");
+    }
+})
+
+// TAB SWITCHING
+document.addEventListener('keydown', evt => {
+    if(evt.key === 'Tab'){
+        alert("SWITCH ");
     }
 })
