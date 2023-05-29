@@ -31,7 +31,7 @@
     user-select: none; 
     font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     font-style: normal;
 }
 body{
@@ -113,7 +113,7 @@ body{
     position: absolute;
     z-index: -100;
     pointer-events: none;
-    transform: translateY(10vh);
+    transform: translateY(5vh);
     color: transparent;
 }
 .container{
@@ -219,7 +219,7 @@ main{
     align-items: center;
     gap: var(--gap);
 }
-.transport-price{
+.transportprice{
     font-size: calc(2.5 * var(--fontsmall));
     letter-spacing: 0.12em;
 }
@@ -261,7 +261,7 @@ main{
 .button-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 80%;
+    width: 85%;
     margin:0 auto;
     gap: var(--gap);
 }
@@ -275,8 +275,21 @@ main{
     justify-content: center;
     text-align: left;
 }
+.buttonicon{
+    padding: var(--padmedium);
+    background-color: white;
+    border-radius: calc( 0.8 * var(--radius));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+}
+.svgicon{
+    width: calc( 3 * var(--fontlarge));
+}
 .icons{
-    width: calc( 2 * var(--fontlarge));
+    width: calc( 1.2 * var(--fontlarge));
 }
 .transport-rental{
     border: 1px solid rgba(242, 255, 254, 0.25);

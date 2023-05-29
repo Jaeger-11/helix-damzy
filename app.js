@@ -1,5 +1,6 @@
 const taxiemployee = document.querySelector('.taxi-employee');
 const taxipark = document.querySelector('.taxi-park');
+const hudnotification = document.querySelector('.hudnotification');
 
 // PUSH NUMBER OF TOTAL STAFF
 const pushTotalStaff = (total) => {
@@ -75,11 +76,27 @@ document.addEventListener('keydown', evt => {
     }
 })
 
-// TAB SWITCHING
+// TAXI SWITCHING ( TAXI EMPLOYEES AND TAXI PARK )
 document.addEventListener('keydown', evt => {
-    if(evt.key === 'Tab'){
-        taxiemployee.classList.toggle('hidden');
-        taxipark.classList.toggle('hidden')
+    if(evt.key === 'ArrowRight'){
+        if(  taxiemployee.classList.contains('hidden') ){
+            taxiemployee.classList.remove('hidden');
+            taxipark.classList.add('hidden');
+            hudnotification.classList.add('hidden');
+        } else if ( taxipark.classList.contains('hidden')){
+            taxiemployee.classList.add('hidden');
+            taxipark.classList.remove('hidden');
+            hudnotification.classList.add('hidden');
+        }
+    }
+})
+
+// HUD NOTIFICATION SWITCH
+document.addEventListener('keydown', evt => {
+    if(evt.key === 'ArrowLeft'){
+        taxiemployee.classList.add('hidden');
+        taxipark.classList.add('hidden');
+        hudnotification.classList.remove('hidden');
     }
 })
 
