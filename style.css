@@ -32,7 +32,6 @@
     font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
     transition: all 0.3s ease;
-    color: white;
     font-style: normal;
 }
 body{
@@ -41,6 +40,7 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    color: white;
 }
 .glowcontainer{
     width: 100vw;
@@ -55,17 +55,20 @@ body{
 }
 .escape{
     position: absolute;
-    bottom: calc(2 * var(--gaplarge));
-    right: calc(2 * var(--gaplarge));
+    bottom: calc(3 * var(--gaplarge));
+    right: calc(3 * var(--gaplarge));
     z-index: 200;
+    font-size: calc( 0.7 * var(--fontsmall));
+    color: rgba(255, 255, 255, 0.65);
 }
 .escape button{
     padding: calc( var(--padlittle));
     color: black;
     font-weight: 600;
     margin-right: var(--gap);
-    border-radius: var(--radius);
+    border-radius: calc(0.7 * var(--radius));
     border: 0;  
+    font-size: calc( 0.7 * var(--fontsmall));
 }
 .capitalize::first-letter{
     text-transform: capitalize;
@@ -272,23 +275,26 @@ main{
     justify-content: center;
     text-align: left;
 }
+.icons{
+    width: calc( 2 * var(--fontlarge));
+}
 .transport-rental{
     border: 1px solid rgba(242, 255, 254, 0.25);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     background: rgba(255, 222, 103, 0.03);
+    color: #FFFFFF;
 }
 .transport-rental:hover{
     background: rgba(255, 222, 103, 0.093);
-    color: rgba(255, 255, 255, 0.373);
 }
 .get-employed{
     background: rgba(255, 201, 62, 0.9);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     border: none;
+    color: #3F2610;
 }
 .get-employed:hover{
     background: #FFC93E;
-    color: rgba(255, 255, 255, 0.373);
 }
 .taxi-first{
     display: flex;
@@ -311,15 +317,21 @@ main{
     padding: var(--padlarger);
     gap: var(--gaplarge);
 }
+.totalorders{
+    color: white;
+    margin-right: var(--padlittle);
+}
 .privateorder{ 
     border: 1px solid rgba(255, 201, 62, 0.4);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
-    border-radius: var(--radius);
-    background: #FFC93E59;
+    border-radius: calc(1.1 * var(--radius));
+    background: url(images/privateordersbg.png);
+    background-size: cover;
 }
 .privateorder:hover{
-    background: #FFC93E99;
+    background: url(images/privateordershoverbg.png);
     border: 1px solid #FFC93E;
+    background-size: cover;
 }
 .privateorder:hover svg g{
     opacity: 1;
@@ -327,12 +339,13 @@ main{
 .governmentorder{
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
-    background: #FFFFFF40;
-    border-radius: var(--radius);
+    background: url(images/governmentordersbg.png);
+    border-radius: calc(1.1 * var(--radius));
+    background-size: cover;
 }
 .governmentorder:hover{
     border: 1px solid #FFFFFF;
-    background: #ffffff58;
+    background: url(images/governmentordershoverbg.png);
 }
 .governmentorder:hover svg g{
     opacity: 1;
@@ -351,12 +364,15 @@ main{
 .taxi-first .second-large{
     display: block;
 }
+.taxi-park main{
+    grid-template-columns: 1fr 3fr;
+}
 .open{
     color: rgba(255, 255, 255, 0.5);
 }
 .grid-4{
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr 0.6fr 1.5fr 1.2fr;
     padding: var(--padlarge);
     gap: 0.2rem;
 }
