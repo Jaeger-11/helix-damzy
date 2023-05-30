@@ -97,6 +97,12 @@ document.addEventListener('keydown', evt => {
         taxiemployee.classList.add('hidden');
         taxipark.classList.add('hidden');
         hudnotification.classList.remove('hidden');
+        const closenotification = () => {
+            taxiemployee.classList.remove('hidden');
+            taxipark.classList.add('hidden');
+            hudnotification.classList.add('hidden');
+        }
+        // setTimeout(closenotification, 5000)
     }
 })
 
@@ -172,3 +178,7 @@ const acceptOrder = (id) => {
 }
 
 document.querySelector('.totalorders').innerHTML = taxiorderdata.length
+
+// NOTIFICATION
+const ordernotification = document.querySelector('.ordernotification');
+

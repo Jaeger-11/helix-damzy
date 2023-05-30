@@ -31,7 +31,7 @@
     user-select: none; 
     font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
     font-style: normal;
 }
 body{
@@ -62,11 +62,11 @@ body{
     color: rgba(255, 255, 255, 0.65);
 }
 .escape button{
-    padding: calc( var(--padlittle));
+    padding: calc(0.7 * var(--padlittle));
     color: black;
     font-weight: 600;
     margin-right: var(--gap);
-    border-radius: calc(0.7 * var(--radius));
+    border-radius: calc(0.5 * var(--radius));
     border: 0;  
     font-size: calc( 0.7 * var(--fontsmall));
 }
@@ -427,6 +427,37 @@ main{
 }
 .dull{
     color: rgba(255, 255, 255, 0.3);
+}
+.ordernotification{
+    padding: var(--padlarge) calc(1.5 * var(--padlarge));
+    border: 1px #FFC93E4D solid;
+    gap: var(--gaplarge);
+    width: max-content;
+    text-align: right;
+    border-radius: calc(0.8 * var(--radius));
+    background: #000000B2;
+    position: absolute;
+    right: var(--gaplarge);
+    top: 20%;
+}
+.ordernotification .lineabsolute{
+    position: absolute;
+    width: 2px;
+    border-radius: 9999px;
+    height: 50%;
+    right: 0;
+    background-color: #FFC93E;
+}
+.ordercustomername{
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+.ordernotification hr{
+    margin: var(--gap) 0;
+    background-color : rgba(255, 255, 255, 0.15);
+    height: 1px;
 }
 @media screen and (min-width: 1200px) {
     .taxi-container{
