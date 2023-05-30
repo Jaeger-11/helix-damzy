@@ -102,7 +102,7 @@ document.addEventListener('keydown', evt => {
             taxipark.classList.add('hidden');
             hudnotification.classList.add('hidden');
         }
-        // setTimeout(closenotification, 5000)
+        setTimeout(closenotification, 5000)
     }
 })
 
