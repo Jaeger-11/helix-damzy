@@ -388,6 +388,7 @@ main{
     grid-template-columns: 1fr 0.6fr 1.5fr 1.2fr;
     padding: var(--padlarge);
     gap: 0.2rem;
+    height: 100%;
 }
 .gold-cont{
     background: rgba(255, 201, 62, 0.12);
@@ -408,7 +409,13 @@ main{
 }
 .customertaxiorder{
     transition: all .3s ease;
-    height: max-content;
+    height: 10vh;
+    position: relative;
+    overflow: hidden;
+}
+.customertaxiorder .dotsandline{
+    position: absolute;
+    bottom: 0;
 }
 .acceptorder{
     background: rgba(255, 201, 62, 0.9);
@@ -421,6 +428,7 @@ main{
     cursor: pointer;
     border: none;
     height: max-content;
+    align-self: center;
 }
 .acceptorder:hover{
     background-color: rgb(255, 201, 62);
@@ -436,6 +444,7 @@ main{
 .process{
     color: rgba(255, 255, 255, 0.5);
     letter-spacing: 0.1em;
+    display: flex;
 }
 .dull{
     color: rgba(255, 255, 255, 0.3);
