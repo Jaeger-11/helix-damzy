@@ -408,6 +408,7 @@ main{
 }
 .customertaxiorder{
     transition: all .3s ease;
+    height: max-content;
 }
 .acceptorder{
     background: rgba(255, 201, 62, 0.9);
@@ -425,11 +426,12 @@ main{
     background-color: rgb(255, 201, 62);
 }
 .hiddenorder{
+    opacity: 0 !important;
+    pointer-events: none;
+    height: 0px;
     padding: 0;
     margin: 0;
-    height: 0px;
-    border: 0;
-    opacity: 0;
+    border: 0;    
 }
 .process{
     color: rgba(255, 255, 255, 0.5);

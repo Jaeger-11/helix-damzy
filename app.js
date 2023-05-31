@@ -172,8 +172,8 @@ const pushTaxiOrders = (orders) => {
 pushTaxiOrders(taxiorderdata);
 
 const acceptOrder = (id) => {
-    document.querySelector('#customerid'+id).classList.add('hiddenorder')
-    taxiorderdata = taxiorderdata.filter((order) => order.id !== id)
+    document.querySelector('#customerid'+id).classList.add('hiddenorder');
+    // taxiorderdata = taxiorderdata.filter((order) => order.id !== id)
     // pushTaxiOrders(taxiorderdata)
 }
 
