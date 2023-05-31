@@ -82,11 +82,11 @@ document.addEventListener('keydown', evt => {
         if(  taxiemployee.classList.contains('hidden') ){
             taxiemployee.classList.remove('hidden');
             taxipark.classList.add('hidden');
-            hudnotification.classList.add('hidden');
+            hudnotification.classList.add('hudnotificationhidden');
         } else if ( taxipark.classList.contains('hidden')){
             taxiemployee.classList.add('hidden');
             taxipark.classList.remove('hidden');
-            hudnotification.classList.add('hidden');
+            hudnotification.classList.add('hudnotificationhidden');
         }
     }
 })
@@ -96,11 +96,11 @@ document.addEventListener('keydown', evt => {
     if(evt.key === 'ArrowLeft'){
         taxiemployee.classList.add('hidden');
         taxipark.classList.add('hidden');
-        hudnotification.classList.remove('hidden');
+        hudnotification.classList.remove('hudnotificationhidden');
         const closenotification = () => {
             taxiemployee.classList.remove('hidden');
             taxipark.classList.add('hidden');
-            hudnotification.classList.add('hidden');
+            hudnotification.classList.add('hudnotificationhidden');
         }
         setTimeout(closenotification, 5000)
     }

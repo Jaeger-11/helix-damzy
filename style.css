@@ -109,7 +109,7 @@ body{
     color: rgba(255, 255, 255, 0.35);
 }
 .hidden{
-    opacity: 0;
+    opacity: 0 !important;
     position: absolute;
     z-index: -100;
     pointer-events: none;
@@ -427,6 +427,22 @@ main{
 }
 .dull{
     color: rgba(255, 255, 255, 0.3);
+}
+.hudnotificationhidden{
+    opacity: 0 !important;
+    position: absolute;
+    z-index: -100;
+    pointer-events: none;
+    transform: translateX(100vw);
+    color: transparent;
+}
+.hudnotification{
+    position: absolute;
+    right: 0;
+    top: 15vh;
+    opacity: 1;
+    transition: all .3s ease;
+    pointer-events: none;
 }
 .ordernotification{
     padding: var(--padlarge) calc(1.5 * var(--padlarge));
