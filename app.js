@@ -149,10 +149,9 @@ const taxiorders = document.querySelector('.taxiorders');
 const pushTaxiOrders = (orders) => {
     taxiorders.innerHTML = ""
     orders.map((order) => {
-        console.log(order)
         const { customer, distance, note, status, id } = order;
         taxiorders.innerHTML += `
-        <section class="customertaxiorder">
+        <section class="customertaxiorder" id=${'customerid'+id}>
             <div class="grid-4">
                 <p class="capitalize semibold fontsmall">${customer}</p>
                 <p class="capitalize semibold fontsmall">${distance}</p>
@@ -173,8 +172,9 @@ const pushTaxiOrders = (orders) => {
 pushTaxiOrders(taxiorderdata);
 
 const acceptOrder = (id) => {
+    document.querySelector('#customerid'+id).classList.add('hiddenorder')
     taxiorderdata = taxiorderdata.filter((order) => order.id !== id)
-    pushTaxiOrders(taxiorderdata)
+    // pushTaxiOrders(taxiorderdata)
 }
 
 document.querySelector('.totalorders').innerHTML = taxiorderdata.length

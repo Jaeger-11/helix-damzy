@@ -406,6 +406,9 @@ main{
     padding-right: var(--gap);
     margin-top: 1rem;
 }
+.customertaxiorder{
+    transition: all .3s ease;
+}
 .acceptorder{
     background: rgba(255, 201, 62, 0.9);
     border-radius: var(--radius);
@@ -420,6 +423,13 @@ main{
 }
 .acceptorder:hover{
     background-color: rgb(255, 201, 62);
+}
+.hiddenorder{
+    padding: 0;
+    margin: 0;
+    height: 0px;
+    border: 0;
+    opacity: 0;
 }
 .process{
     color: rgba(255, 255, 255, 0.5);
