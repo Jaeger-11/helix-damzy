@@ -144,9 +144,13 @@ let taxiorderdata = [
         status: "pending"
     },
 ]
+const totalOrders = (data) => {
+    document.querySelector('.totalorders').innerHTML = data.length
+}
 
 const taxiorders = document.querySelector('.taxiorders');
 const pushTaxiOrders = (orders) => {
+    totalOrders(orders)
     taxiorders.innerHTML = ""
     orders.map((order) => {
         const { customer, distance, note, status, id } = order;
@@ -173,12 +177,9 @@ pushTaxiOrders(taxiorderdata);
 
 const acceptOrder = (id) => {
     document.querySelector('#customerid'+id).classList.add('hiddenorder');
-    // taxiorderdata = taxiorderdata.filter((order) => order.id !== id)
-    // pushTaxiOrders(taxiorderdata)
+    taxiorderdata = taxiorderdata.filter((order) => order.id !== id)
+    // setTimeout(pushTaxiOrders(taxiorderdata), 3000)
+    totalOrders(taxiorderdata)
 }
 
-document.querySelector('.totalorders').innerHTML = taxiorderdata.length
-
-// NOTIFICATION
-const ordernotification = document.querySelector('.ordernotification');
 
