@@ -329,6 +329,10 @@ main{
     width: 100%;
     padding: var(--padlarger);
     gap: var(--gaplarge);
+    border-radius: calc(1.1 * var(--radius));
+    background-size: 3000px !important;
+    background-repeat: no-repeat;
+    background-position:10% !important;
 }
 .totalorders{
     color: white;
@@ -337,14 +341,11 @@ main{
 .privateorder{ 
     border: 1px solid rgba(255, 201, 62, 0.4);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
-    border-radius: calc(1.1 * var(--radius));
     background: url(images/privateordersbg.png);
-    background-size: cover;
 }
 .privateorder:hover{
     background: url(images/privateordershoverbg.png);
     border: 1px solid #FFC93E;
-    background-size: cover;
 }
 .privateorder:hover svg g{
     opacity: 1;
@@ -353,13 +354,10 @@ main{
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.03);
     background: url(images/governmentordersbg.png);
-    border-radius: calc(1.1 * var(--radius));
-    background-size: cover;
 }
 .governmentorder:hover{
     border: 1px solid #FFFFFF;
     background: url(images/governmentordershoverbg.png);
-    background-size: cover;
 }
 .governmentorder:hover svg g{
     opacity: 1;
