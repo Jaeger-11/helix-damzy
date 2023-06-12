@@ -359,6 +359,7 @@ main{
 .governmentorder:hover{
     border: 1px solid #FFFFFF;
     background: url(images/governmentordershoverbg.png);
+    background-size: cover;
 }
 .governmentorder:hover svg g{
     opacity: 1;
